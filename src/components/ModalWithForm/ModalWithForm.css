@@ -23,6 +23,8 @@
   position: absolute;
   top: 20px;
   right: 28px;
+  background: none;
+  border: none;
 }
 
 .modal__content {
@@ -32,6 +34,7 @@
   max-width: 496px;
   box-sizing: border-box;
   width: 100%;
+  border-radius: 20px;
 }
 
 .modal__form {
@@ -42,6 +45,9 @@
 
 .modal__input {
   display: block;
+  border: none;
+  border-bottom: 1px solid;
+  width: 100%;
 }
 
 .modal__radio-buttons {
