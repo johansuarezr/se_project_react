@@ -1,8 +1,9 @@
-.modal__container_type_image {
+.modal__content_type_image {
   position: relative;
   max-width: 498px;
   height: 610px;
   width: 100%;
+  padding: 0;
   background-color: #fff;
   border-radius: 20px;
   box-sizing: border-box;
