@@ -84,14 +84,14 @@ function App() {
     };
   }, [activeModal]);
 
-  const handleAddItemSubmit = ({ name, imageUrl, weather }) => {
-    addItem({ name, imageUrl, weather })
-      .then((values) => {
-        setClothingItems([values, ...clothingItems]);
-        closeActiveModal();
-      })
-      .catch((err) => console.log(err));
-  };
+  // const handleAddItemSubmit = ({ name, imageUrl, weather }) => {
+  //   addItem({ name, imageUrl, weather })
+  //     .then((values) => {
+  //       setClothingItems([values, ...clothingItems]);
+  //       closeActiveModal();
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   const handleOpenDelete = (cardId) => {
     deleteCard(selectedCard._id)
@@ -155,7 +155,7 @@ function App() {
     const { name, imageUrl, weather } = values;
     const token = getToken();
     api
-      .postItem(name, imageUrl, weather, token)
+      .addItem(name, imageUrl, weather, token)
       .then((res) => {
         setClothingItems((prevItems) => [res.data, ...prevItems]);
         closeActiveModal();
@@ -168,7 +168,7 @@ function App() {
   const onDeleteItem = (_id) => {
     const token = getToken();
     api
-      .deleteItem(_id, token)
+      .deleteCard(_id, token)
       .then(() => {
         const updatedItems = clothingItems.filter((item) => item._id !== _id);
         setClothingItems(updatedItems);
@@ -305,8 +305,8 @@ function App() {
             <Footer />
           </div>
           <AddItemModal
-            isAddGarmentOpen={isAddGarmentOpen}
-            onAddItem={handleAddItemSubmit}
+            isOpen={isAddGarmentOpen}
+            onAddItem={onAddItem}
             onClose={closeActiveModal}
           />
           <ItemModal
