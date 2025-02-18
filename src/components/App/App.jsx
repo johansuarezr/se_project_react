@@ -157,7 +157,7 @@ function App() {
     api
       .addItem(name, imageUrl, weather, token)
       .then((res) => {
-        setClothingItems((prevItems) => [res.data, ...prevItems]);
+        setClothingItems((prevItems) => [res, ...prevItems]);
         closeActiveModal();
       })
       .catch((error) => {
