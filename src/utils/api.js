@@ -13,11 +13,11 @@ function getItems() {
   }).then(checkRes);
 }
 
-function addItem({ name, imageUrl, weather }) {
+function addItem(name, imageUrl, weather, token) {
   return fetch(`${baseUrl}/items`, {
     headers: {
       "Content-Type": "application/json",
-      authorization: "Bearer " + localStorage.getItem("jwt"),
+      authorization: "Bearer " + token,
     },
     method: "POST",
     body: JSON.stringify({ name, imageUrl, weather }),
