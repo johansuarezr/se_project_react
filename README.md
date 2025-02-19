@@ -16,3 +16,7 @@ It is build from frontend to backend, and deploy to the Google Cloud server.
 ## Deployed Github Page
 
 - https://johansuarezr.github.io/se_project_react/
+
+## Backend Repo
+
+- https://github.com/johansuarezr/se_project_express
