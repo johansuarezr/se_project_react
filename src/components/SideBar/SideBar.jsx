@@ -10,8 +10,10 @@ function SideBar({ handleProfileEditClick, onLogOut }) {
 
   return (
     <div className="sidebar">
-      <img src={avatar} alt="Default Avatar" className="sidebar__avatar" />
-      <p className="sidebar__username">{name}</p>
+      <div className="sidebar__container">
+        <img src={avatar} alt="Default Avatar" className="sidebar__avatar" />
+        <p className="sidebar__username">{name}</p>
+      </div>
       <div className="sidebar__buttons">
         <button
           onClick={handleProfileEditClick}

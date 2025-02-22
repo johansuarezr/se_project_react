@@ -4,6 +4,11 @@
   height: 56px;
   gap: 15px;
   padding-top: 19px;
+  flex-direction: column;
+}
+
+.sidebar__container {
+  display: flex;
 }
 
 .sidebar__avatar {
@@ -35,7 +40,7 @@
   font-family: "Cabinet Grotesk";
 }
 
-.sidebar__signout-button {
+.sidebar__singout-button {
   height: 25px;
   margin-top: 8px;
   font-size: 20px;

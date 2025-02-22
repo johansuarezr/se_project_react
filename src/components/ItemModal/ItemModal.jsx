@@ -12,7 +12,7 @@ function ItemModal({ isOpen, onClose, card, onOpenDelete }) {
     isOwn ? "" : "modal__delete-button_hidden"
   }`;
   return (
-    <div className={`modal ${isOpen === "preview" && "modal_opened"}`}>
+    <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content modal__content_type_image">
         <button
           onClick={onClose}
