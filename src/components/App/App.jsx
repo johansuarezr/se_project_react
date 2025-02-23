@@ -134,7 +134,7 @@ function App() {
           .likeItem(id, token)
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard.data : item))
+              cards.map((item) => (item._id === id ? updatedCard : item))
             );
             console.log("Updated (liked) card from API:", updatedCard.data);
           })

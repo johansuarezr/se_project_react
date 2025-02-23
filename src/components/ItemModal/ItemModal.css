@@ -1,13 +1,12 @@
 .modal__content_type_image {
-  position: relative;
-  max-width: 498px;
-  height: 610px;
-  width: 100%;
-  padding: 0;
-  background-color: #fff;
   border-radius: 20px;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 #0000004d;
+  max-width: 496px;
+  width: 100%;
   box-sizing: border-box;
-  padding: 0;
 }
 
 .modal__image {

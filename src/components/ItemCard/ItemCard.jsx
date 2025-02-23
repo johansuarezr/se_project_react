@@ -30,13 +30,11 @@ function ItemCard({ item, onCardClick, onCardLike }) {
     <li className="card">
       <div className="card__info_container">
         <h2 className="card__name">{item.name}</h2>
-        {isOwn && (
-          <button
-            onClick={handleLike}
-            className={itemLikeButtonClassName}
-            type="button"
-          ></button>
-        )}
+        <button
+          onClick={handleLike}
+          className={itemLikeButtonClassName}
+          type="button"
+        ></button>
       </div>
       <img
         onClick={handleCardClick}
