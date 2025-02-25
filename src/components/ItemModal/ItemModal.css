@@ -1,4 +1,4 @@
-.modal__content_type_image {
+/* .modal__content_type_image {
   border-radius: 20px;
   position: relative;
   background-color: white;
@@ -7,7 +7,8 @@
   max-width: 496px;
   width: 100%;
   box-sizing: border-box;
-}
+  padding: 0;
+} */
 
 .modal__image {
   width: 100%;
@@ -15,10 +16,6 @@
   display: block;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-}
-
-.modal__footer {
-  padding: 20px 0 32px 32px;
 }
 
 .modal__caption {
@@ -29,6 +26,29 @@
   margin: 0;
   padding: 0;
   font-family: "CabinetGrotesk-Medium", Arial, sans-serif;
+}
+
+.modal__footer {
+  padding: 20px 0 32px 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modal__footer_delete-button {
+  display: inline;
+  color: #ff4d00;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  background-color: inherit;
+  font-family: "Cabinet Grotesk";
+  cursor: pointer;
+}
+
+.modal__footer_heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .modal__weather {

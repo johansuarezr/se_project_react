@@ -38,7 +38,7 @@
   border-radius: 20px;
 }
 
-/* .modal__content_type_image {
+.modal__content_type_image {
   border-radius: 20px;
   position: relative;
   background-color: white;
@@ -47,7 +47,8 @@
   max-width: 496px;
   width: 100%;
   box-sizing: border-box;
-} */
+  padding: 0;
+}
 
 .modal__form {
   display: flex;
