@@ -55,7 +55,7 @@ function unlikeItem(cardId, token) {
 }
 
 function editProfile(name, avatar, token) {
-  return fetch(`${BASE_URL}/users/me`, {
+  return fetch(`${baseUrl}/users/me`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

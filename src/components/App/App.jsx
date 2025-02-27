@@ -19,7 +19,7 @@ import EditProfileModal from "../EditProfileModal/EditProfileModal";
 import DeleteItemModal from "../DeleteItemModal/DeleteItemModal";
 import ProtectedRoute from "../ProtectedRoute";
 import { getToken, removeToken, setToken } from "../../utils/token";
-import { getItems, addItem, deleteCard } from "../../utils/api";
+import { getItems, addItem, deleteCard, editProfile } from "../../utils/api";
 import * as auth from "../../utils/auth";
 import * as api from "../../utils/api";
 
@@ -94,7 +94,8 @@ function App() {
   // };
 
   const handleOpenDelete = (cardId) => {
-    deleteCard(selectedCard._id)
+    const token = getToken();
+    deleteCard(selectedCard._id, token)
       .then((data) => {
         setClothingItems(
           clothingItems.filter((item) => item._id !== selectedCard._id)
@@ -134,7 +135,7 @@ function App() {
           .likeItem(id, token)
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard : item))
+              cards.map((item) => (item._id === id ? updatedCard.data : item))
             );
             console.log("Updated (liked) card from API:", updatedCard.data);
           })
@@ -290,7 +291,7 @@ function App() {
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <Profile
-                      handleCardLike={handleCardLike}
+                      onCardLike={handleCardLike}
                       handleAddClick={handleAddClick}
                       handleCardClick={handleCardClick}
                       clothingItems={clothingItems}
