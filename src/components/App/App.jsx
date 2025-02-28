@@ -93,7 +93,9 @@ function App() {
   //     .catch((err) => console.log(err));
   // };
 
-  const handleOpenDelete = (cardId) => {
+  const handleOpenDelete = (card) => {
+    setActiveModal("delete-item");
+    setSelectedCard(card);
     const token = getToken();
     deleteCard(selectedCard._id, token)
       .then((data) => {
@@ -158,7 +160,7 @@ function App() {
     api
       .addItem(name, imageUrl, weather, token)
       .then((res) => {
-        setClothingItems((prevItems) => [res, ...prevItems]);
+        setClothingItems((prevItems) => [res.data, ...prevItems]);
         closeActiveModal();
       })
       .catch((error) => {
