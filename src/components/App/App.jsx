@@ -95,17 +95,17 @@ function App() {
 
   const handleOpenDelete = (card) => {
     setActiveModal("delete-item");
-    setSelectedCard(card);
-    const token = getToken();
-    deleteCard(selectedCard._id, token)
-      .then((data) => {
-        setClothingItems(
-          clothingItems.filter((item) => item._id !== selectedCard._id)
-        );
-        setSelectedCard({});
-        closeActiveModal();
-      })
-      .catch(console.error);
+    // setSelectedCard(card);
+    // const token = getToken();
+    // deleteCard(selectedCard._id, token)
+    //   .then((data) => {
+    //     setClothingItems(
+    //       clothingItems.filter((item) => item._id !== selectedCard._id)
+    //     );
+    //     setSelectedCard({});
+    //     closeActiveModal();
+    //   })
+    //   .catch(console.error);
   };
 
   const handleToggleSwitchChange = () => {
