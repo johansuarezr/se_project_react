@@ -1,4 +1,7 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwr01.jumpingcrab.com"
+    : "http://localhost:3001";
 import { checkRes } from "./api";
 
 function authorize(email, password) {
